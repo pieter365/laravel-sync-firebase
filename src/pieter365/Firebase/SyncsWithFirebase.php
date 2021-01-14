@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpociot\Firebase;
+namespace pieter365\Firebase;
 
 use Firebase\FirebaseInterface;
 use Firebase\FirebaseLib;
