@@ -20,7 +20,7 @@
     },
     "require": {
         "php": ">=7.0.0",
-        "ktamas77/firebase-php": "^2.2"
+        "ktamas77/firebase-php": "2.2.4"
     },
     "require-dev": {
         "mockery/mockery": "~0.9",
