@@ -1,0 +1,40 @@
+{
+    "name": "pieterp365/laravel-sync-firebase",
+    "license": "MIT",
+    "description": "Firebase realtime database.",
+    "keywords": [
+        "firebase",
+        "eloquent",
+        "laravel"
+    ],
+    "homepage": "http://github.com/pieter365/laravel-sync-firebase",
+    "authors": [
+        {
+            "name": "Pieter",
+            "email": "pieterp365@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/pieter365/laravel-sync-firebase/issues",
+        "source": "https://github.com/pieter365/laravel-sync-firebase"
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "ktamas77/firebase-php": "^3.2"
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9",
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "~4.7 || ~5.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "pieter365\\Firebase": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "pieter365\\Firebase\\Tests\\": "tests/"
+        }
+    }
+}
