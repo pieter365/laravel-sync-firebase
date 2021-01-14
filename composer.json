@@ -22,6 +22,7 @@
         "php": ">=7.0.0",
         "ktamas77/firebase-php": "*.*.*"
     },
+    "minimum-stability": "dev",
     "require-dev": {
     },
     "autoload": {
