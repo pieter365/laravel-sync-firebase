@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpociot\Firebase;
+namespace pieter365\Firebase;
 
 use Firebase\FirebaseInterface;
 use Firebase\FirebaseLib;
@@ -22,6 +22,7 @@ trait SyncsWithFirebase
      */
     public static function bootSyncsWithFirebase()
     {
+
         static::created(function ($model) {
             $model->saveToFirebase('set');
         });
@@ -61,14 +62,15 @@ trait SyncsWithFirebase
     protected function saveToFirebase($mode)
     {
         if (is_null($this->firebaseClient)) {
-            $this->firebaseClient = new FirebaseLib(config('services.firebase.database_url'), config('services.firebase.secret'));
+            $this->firebaseClient = new FirebaseLib(env('FIREBASE_URL'),env('FIREBASE_KEY'));
         }
         $path = $this->getTable() . '/' . $this->getKey();
 
         if ($mode === 'set') {
             $this->firebaseClient->set($path, $this->getFirebaseSyncData());
         } elseif ($mode === 'update') {
-            $this->firebaseClient->update($path, $this->getFirebaseSyncData());
+            //$this->firebaseClient->update($path, $this->getFirebaseSyncData());
+            print_r($this->firebaseClient->update($path, $this->getFirebaseSyncData()));
         } elseif ($mode === 'delete') {
             $this->firebaseClient->delete($path);
         }
