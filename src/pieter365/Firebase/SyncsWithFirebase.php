@@ -69,8 +69,7 @@ trait SyncsWithFirebase
         if ($mode === 'set') {
             $this->firebaseClient->set($path, $this->getFirebaseSyncData());
         } elseif ($mode === 'update') {
-            //$this->firebaseClient->update($path, $this->getFirebaseSyncData());
-            print_r($this->firebaseClient->update($path, $this->getFirebaseSyncData()));
+            $this->firebaseClient->update($path, $this->getFirebaseSyncData());
         } elseif ($mode === 'delete') {
             $this->firebaseClient->delete($path);
         }
